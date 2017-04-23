@@ -10,7 +10,7 @@
     echo '</div>';
     echo '</header>';
     echo '<nav>';
-    echo '<a href="index.php">Home</a>';
+    echo '<a href="/">Home</a>';
     echo '<a href="about.php">About</a>';
     echo '<a href="projects.php">Projects</a>';
     echo '<a href="contact.php">Contact</a>';
