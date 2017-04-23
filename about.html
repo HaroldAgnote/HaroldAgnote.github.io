@@ -8,7 +8,7 @@
     <title>Harold Agnote</title>
 
 </head>
-
+<script src="js/loremIpsum.js"></script>
 <body>
 <header>
     <h1 id = "myName">Harold Agnote</h1>
@@ -26,22 +26,41 @@
     <a href="contact.html">Contact</a>
 </nav>
 <main>
-    <div id="contactDiv">
-        <p>
-            Want to send me a message? <br>
-            Use this form so that you can reach out to me and I'll get back to you as soon as possible!
-        </p>
-        <form action="contact.php" method="post" id="contactForm">
-            <label for = "contactName">Name: </label><input type="text" name="contactName" id="contactName">
-            <label for = "contactEmail">Email: </label><input type="email" name = "contactEmail" id="contactEmail">
-            <label for = "contactPhone">Phone: </label><input type="tel" name="contactPhone" id="contactPhone">
-            <label for = "contactComment">Comment:</label> <textarea name="contactComment" id="contactComment" rows = "10" cols="50"></textarea>
-            <div id="formButtons">
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
+    <div id="aboutMe">
+        <div id="profession">
+            <h2>About Me</h2>
+            <div class="description" id="introduction">
+                <script>
+                    document.getElementById("introduction").innerHTML = lorem;
+                </script>
             </div>
-
-        </form>
+            <h2>What am I doing?</h2>
+            <div class="description" id="where">
+                <script>
+                    document.getElementById("where").innerHTML = lorem;
+                </script>
+            </div>
+            <h2>What do I know?</h2>
+            <div class="description" id="know">
+                <script>
+                    document.getElementById("know").innerHTML = lorem;
+                </script>
+            </div>
+            <h2>What is my future?</h2>
+            <div class="description" id="future">
+                <script>
+                    document.getElementById("future").innerHTML = lorem;
+                </script>
+            </div>
+        </div>
+        <div id="fluff">
+            <h2>Fun Facts</h2>
+            <div class="description" id = "fun">
+                <script>
+                    document.getElementById("fun").innerHTML = lorem + lorem;
+                </script>
+            </div>
+        </div>
     </div>
 </main>
 <footer>

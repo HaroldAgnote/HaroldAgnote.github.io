@@ -10,6 +10,9 @@
 </head>
 
 <body>
+
+
+
 <header>
     <h1 id = "myName">Harold Agnote</h1>
     <div id = "intro">
@@ -36,6 +39,8 @@
     <div id = "blog">
         <div id = "feed">
             <div id = "newsItems">
+                <h2>News Feed</h2>
+
                 <?php
                     $query = "SELECT * FROM Articles ORDER BY TIMESTAMP DESC ";
                     $result = mysqli_query($db, $query);
@@ -118,7 +123,7 @@
     <a href = "https://linkedin.com/in/HaroldAgnote"><div class="fa fa-linkedin"></div></a>
 </footer>
 </body>
-
+<script src="js/jquery.js"></script>
 <script src = "js/date.js"></script>
-
+<script src="js/konami.js"></script>
 </html>

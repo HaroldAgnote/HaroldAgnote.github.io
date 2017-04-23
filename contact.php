@@ -51,7 +51,7 @@
   <title>' . $contactName . '\'s message' . '</title>
 </head>
 <body>
-  <p>Here is ' . $contactName . '\s message' . '</p>
+  <p>Here is ' . $contactName . '\'s message' . '</p>
   <p>
     Email: ' . $contactEmail . '
   </p>
@@ -99,5 +99,8 @@
     <a href = "https://linkedin.com/in/HaroldAgnote"><div class="fa fa-linkedin"></div></a>
 </footer>
 </body>
+
+<script src="js/jquery.js"></script>
+<script src="js/konami.js"></script>
 
 </html>
