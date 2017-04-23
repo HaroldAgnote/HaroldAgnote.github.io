@@ -1,103 +1,31 @@
-<!DOCTYPE html>
-<html lang = "en">
-<head>
-    <meta charset = "UTF-8">
-    <link rel = "stylesheet" type = "text/css" href = "css/style.css">
-    <link rel = "stylesheet" type = "text/css" href = "css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bangers|Bevan|Roboto" rel="stylesheet">
-    <title>Harold Agnote</title>
-
-</head>
+<?php include 'head.php'; ?>
 
 <body>
-<header>
-    <h1 id = "myName">Harold Agnote</h1>
-    <div id = "intro">
-        <img id = "mePic" src = "images/me.png" alt = "This is a picture of me!">
-        <p id = "smallDesc">
-            Hi! My name is Harold Agnote. I am an aspiring software engineer who loves programming.
-        </p>
-    </div>
-</header>
-<nav>
-    <a href="index.php">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-</nav>
 
-<?php
-    $websiteURL = 'haroldagnote.net';
-
-    $contactName = $_POST["contactName"];
-    $contactEmail = $_POST["contactEmail"];
-    $contactPhone = $_POST["contactPhone"];
-    $contactComment = $_POST["contactComment"];
-
-    // Multiple recipients
-    $to = 'haroldagnote38@hotmail.com'; // note the comma
-
-    // Subject
-    $submitMessage = ' submitted a Contact Form at ';
-
-    $subject = $contactName;
-    $subject .= $submitMessage;
-    $subject .= $websiteURL;
-
-    // Message
-    $message = '
-<html>
-<head>
-  <title>' . $contactName . '\'s message' . '</title>
-</head>
-<body>
-  <p>Here is ' . $contactName . '\'s message' . '</p>
-  <p>
-    Email: ' . $contactEmail . '
-  </p>
-    Phone: ' . $contactPhone . '
-  <p>
-    Comment: <br>
-    ' . $contactComment . '
-  </p>
-</body>
-</html>
-';
-
-    // To send HTML mail, the Content-type header must be set
-    $headers[] = 'MIME-Version: 1.0';
-    $headers[] = 'Content-type: text/html; charset=UTF-8';
-
-    $headers[] = 'From: <acehunter327@gmail.com>';
-
-    // Mail it
-    mail($to, $subject, $message, implode("\r\n", $headers));
-?>
+<?php include 'header.php'; ?>
 
 <main>
-    <div id="contactInfo">
-        <h3>Thank you, <?php echo $contactName?>!</h3>
+    <div id="contactDiv">
         <p>
-            Here's the information you submitted:
+            Want to send me a message? <br>
+            Use this form so that you can reach out to me and I'll get back to you as soon as possible!
         </p>
-        <p>
-            Email: <?php echo $contactEmail?>
-        </p>
-        <p>
-            Phone: <?php echo $contactPhone?>
-        </p>
-        <p>
-            Comment: <br> <?php echo $contactComment?>
-        </p>
+        <form action = "contact_confirmation.php" method = "post" id = "contactForm">
+            <label for = "contactName">Name: </label><input type="text" name="contactName" id="contactName">
+            <label for = "contactEmail">Email: </label><input type="email" name = "contactEmail" id="contactEmail">
+            <label for = "contactPhone">Phone: </label><input type="tel" name="contactPhone" id="contactPhone">
+            <label for = "contactComment">Comment:</label> <textarea name="contactComment" id="contactComment" rows = "10" cols="50"></textarea>
+            <div id="formButtons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+
+        </form>
     </div>
 </main>
-<footer>
-    <a href = "mailto:haroldagnote38@hotmail.com">
-        <div class="fa fa-envelope-o"></div>
-    </a>
-    <a href = "https://github.com/HaroldAgnote"><div class="fa fa-github"></div></a>
-    <a href = "https://linkedin.com/in/HaroldAgnote"><div class="fa fa-linkedin"></div></a>
-</footer>
+
+<?php include 'footer.php'; ?>
+
 </body>
 
 <script src="js/jquery.js"></script>

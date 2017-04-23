@@ -1,36 +1,12 @@
-<!DOCTYPE html>
-<html lang = "en">
-<head>
-    <meta charset = "UTF-8">
-    <link rel = "stylesheet" type = "text/css" href = "css/style.css">
-    <link rel = "stylesheet" type = "text/css" href = "css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bangers|Bevan|Roboto" rel="stylesheet">
-    <title>Harold Agnote</title>
-
-</head>
+<?php include 'head.php'; ?>
 
 <body>
 
+<?php include 'header.php'; ?>
 
-
-<header>
-    <h1 id = "myName">Harold Agnote</h1>
-    <div id = "intro">
-        <img id = "mePic" src = "images/me.png" alt = "This is a picture of me!">
-        <p id = "smallDesc">
-            Hi! My name is Harold Agnote. I am an aspiring software engineer who loves programming.
-        </p>
-    </div>
-</header>
-<nav>
-    <a href="index.php">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-</nav>
 
 <?php
-    $db = mysqli_connect('localhost','root','','MyWebsite');
+    $db = mysqli_connect('localhost', 'root', 'gtrwjkR4ODOYhNIx', 'MyWebsite');
 ?>
 
 <main>
@@ -102,12 +78,7 @@
             <h2>Archive</h2>
             <div id = "archiveLog">
                 <ul>
-                    <li>April</li>
-                    <li>March</li>
-                    <li>February</li>
-                    <li>January</li>
-                    <li>December</li>
-                    <li>November</li>
+                    <li>April 2017</li>
                 </ul>
             </div>
         </div>
@@ -115,15 +86,13 @@
 
 
 </main>
-<footer>
-    <a href = "mailto:haroldagnote38@hotmail.com">
-        <div class="fa fa-envelope-o"></div>
-    </a>
-    <a href = "https://github.com/HaroldAgnote"><div class="fa fa-github"></div></a>
-    <a href = "https://linkedin.com/in/HaroldAgnote"><div class="fa fa-linkedin"></div></a>
-</footer>
+
+<?php include 'footer.php'; ?>
+
 </body>
+
 <script src="js/jquery.js"></script>
-<script src = "js/date.js"></script>
 <script src="js/konami.js"></script>
+<script src = "js/date.js"></script>
+
 </html>
